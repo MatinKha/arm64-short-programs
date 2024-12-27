@@ -1,6 +1,6 @@
 # description
 Short assembly programs written for the AArch64 architecture. These programs have been tested with QEMU for systems that are not natively AArch64-based. 
-### assebly codes are described line by line as comments in each "*.s" file
+### assembly codes are described line by line as comments in each "*.s" file
 
 ## compiling
 To assemble and link the programs, use the GNU AArch64 toolchain. For example:
