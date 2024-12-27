@@ -1,6 +1,6 @@
 # description
 Short assembly programs written for the AArch64 architecture. These programs have been tested with QEMU for systems that are not natively AArch64-based. 
-### assembly codes are explained in [This File](persionExplanation.md).
+### Persion explanation is in [This File](persionExplanation.md).
 
 ## compiling
 To assemble and link the programs, use the GNU AArch64 toolchain. For example:
