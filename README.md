@@ -1,27 +1,30 @@
 # description
-short assembly programs written in aarch64 architecture
-Tested With qemu 
+Short assembly programs written for the AArch64 architecture. These programs have been tested with QEMU for systems that are not natively AArch64-based. 
 
 ## compiling
-  simply assemble and link with gnu-aarch64-compiler 
+To assemble and link the programs, use the GNU AArch64 toolchain. For example:
+```bash
+$ aarch64-linux-gnu-as -o program.o program.s
+$ aarch64-linux-gnu-ld -o program program.o
+```
+## Running with QEMU
 
-## running with QEMU
-  for systems which are not based on aarch64
-  first you should provide your aarch64 gnu binaries root path 
-  example:
-  
-  ```bash
-    $ export QEMU_LD_PREFIX=/usr/aarch64-linux-gnu
-  ```
-  
-  after that run the programs directly with qemu-aarch64 
-  
-  ```bash
-    $ qemu-aarch64 PROGRAM
-  ```
+For systems that are not based on AArch64, ensure the following steps are completed:
+
+1.Provide the root path of your AArch64 GNU binaries:
+```bash
+$ export QEMU_LD_PREFIX=/usr/aarch64-linux-gnu
+```
+Run the programs directly using qemu-aarch64:
+```bash
+$ qemu-aarch64 program
+```
+
 ## Scripts
-  there is also an script written for automatic compilation and execution for arch Linux
-  Usage:
-  ```bash
-    $ execute.sh ASSEMBLYCODEPATH
-  ```
+
+A helper script (execute.sh) is provided for automatic compilation and execution on Arch Linux systems.
+Usage:
+```bash
+$ ./execute.sh ASSEMBLYCODEPATH
+```
+The script automates the process of assembling, linking, and running the specified assembly code.
